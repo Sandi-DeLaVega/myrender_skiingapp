@@ -21,7 +21,7 @@ resorts = (
         country_cannon_rank = lambda x: x.groupby("Country", as_index=False)["Snow cannons"].rank(ascending=False),
     ))
 
-#server = Flask(__name__)
+server = Flask(__name__)
 app = Dash(server = server,  external_stylesheets=[dbc.themes.ZEPHYR,  dbc_css])
 app.title = 'Skiing Resort Dashboard'
 server = app.server
